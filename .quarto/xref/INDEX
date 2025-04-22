@@ -22,5 +22,11 @@
   },
   "mysite/blog/h1_matching/index.qmd": {
     "index.html": "26498ce4"
+  },
+  "blog/h1_matching/index.qmd": {
+    "index.html": "99b53c9f"
+  },
+  "blog/project1/index.qmd": {
+    "index.html": "5ea22eb2"
   }
 }

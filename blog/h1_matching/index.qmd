@@ -1,9 +1,12 @@
 ---
 title: "A Replication of Karlan and List (2007)"
 author: "Your Name"
-date: today
+date: "2025-04-22"
 callout-appearance: minimal # this hides the blue "i" icon on .callout-notes
 jupyter: python3
+execute:
+  echo: true
+  eval: true
 ---
 
 
@@ -27,11 +30,13 @@ This project seeks to replicate their results.
 This dataset was provided by Karlan and List (2007) and contains information on over 50,000 individuals who received a direct mail fundraising letter. The variables describe the treatment they were assigned, their prior donation behavior, and their demographic or regional context.
 
 ```{python}
+#| echo: true
+#| eval: true
+
 import pandas as pd
 import pyreadstat
 
 df, meta = pyreadstat.read_dta("Week1/karlan_list_2007.dta")
-
 df.head()
 
 :::: {.callout-note collapse="true"}

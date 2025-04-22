@@ -16,7 +16,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pandas as pd
 
-# 使用 mtcars 数据集的模拟版本
+
 mtcars = pd.DataFrame({
     "wt": [2.62, 2.875, 2.32, 3.215, 3.44, 3.46, 3.57, 3.19],
     "mpg": [21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4]
