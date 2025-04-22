@@ -1,0 +1,16 @@
+---
+title: "Katya Qin"
+image: "week1/identification_photo.jpg"
+about: 
+    template: jolla
+    links:
+        - icon: envelope
+          href: "mailto:keqin@ucsd.edu"
+        - icon: linkedin
+          href: http://www.linkedin.com/in/katya-kehangqin-9b64a524b
+
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
