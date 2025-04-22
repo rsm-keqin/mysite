@@ -13,5 +13,14 @@
   },
   "mysite/index.qmd": {
     "index.html": "d98fc1f5"
+  },
+  "mysite/blog/project1/index.qmd": {
+    "index.html": "99a64590"
+  },
+  "mysite/blog/project1/index1.qmd": {
+    "index1.html": "3506dced"
+  },
+  "mysite/blog/h1_matching/index.qmd": {
+    "index.html": "26498ce4"
   }
 }
