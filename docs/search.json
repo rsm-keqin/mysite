@@ -1,5 +1,33 @@
 [
   {
+    "objectID": "mysite/index.html",
+    "href": "mysite/index.html",
+    "title": "kehang_site",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+  },
+  {
+    "objectID": "mysite/blog/project1/index.html",
+    "href": "mysite/blog/project1/index.html",
+    "title": "Project 2",
+    "section": "",
+    "text": "I cleaned some data."
+  },
+  {
+    "objectID": "mysite/blog/project1/index.html#section-1-data",
+    "href": "mysite/blog/project1/index.html#section-1-data",
+    "title": "Project 2",
+    "section": "",
+    "text": "I cleaned some data."
+  },
+  {
+    "objectID": "mysite/blog/project1/index.html#section-2-analysis",
+    "href": "mysite/blog/project1/index.html#section-2-analysis",
+    "title": "Project 2",
+    "section": "Section 2: Analysis",
+    "text": "Section 2: Analysis\nI analyzed the data.\nimport matplotlib.pyplot as plt import seaborn as sns import pandas as pd"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Katya Qin",
@@ -12,13 +40,6 @@
     "title": "Resume",
     "section": "",
     "text": "Download PDF file."
-  },
-  {
-    "objectID": "mysite/index.html",
-    "href": "mysite/index.html",
-    "title": "kehang_site",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
     "objectID": "blog.html",
