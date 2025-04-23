@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +68,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -184,12 +187,529 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="data">Data</h2>
 <section id="description" class="level3">
 <h3 class="anchored" data-anchor-id="description">Description</h3>
-<p>This dataset was provided by Karlan and List (2007) and contains information on over 50,000 individuals who received a direct mail fundraising letter. The variables describe the treatment they were assigned, their prior donation behavior, and their demographic or regional context.</p>
-<p>#| echo: true #| eval: true</p>
-<p>import pandas as pd import pyreadstat</p>
-<p>df, meta = pyreadstat.read_dta(“Week1/karlan_list_2007.dta”) df.head()</p>
+<p>This dataset includes 50,083 observations from a field experiment conducted by Karlan and List (2007). Each observation represents a previous donor to a liberal nonprofit organization in the U.S., who received a fundraising letter with randomized treatments. The variables cover experimental assignments (e.g., matching ratios and amounts), donation responses, and background characteristics such as donation history, gender, and zip-code–level census data.</p>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📋 Overview of Variables
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="91d1d066" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="27">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th">Data Type</th>
+<th data-quarto-table-cell-role="th">Missing (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">treatment</td>
+<td>treatment</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">control</td>
+<td>control</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ratio</td>
+<td>ratio</td>
+<td>category</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ratio2</td>
+<td>ratio2</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ratio3</td>
+<td>ratio3</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">size</td>
+<td>size</td>
+<td>category</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">size25</td>
+<td>size25</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">size50</td>
+<td>size50</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">size100</td>
+<td>size100</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">sizeno</td>
+<td>sizeno</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ask</td>
+<td>ask</td>
+<td>category</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">askd1</td>
+<td>askd1</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">askd2</td>
+<td>askd2</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">askd3</td>
+<td>askd3</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ask1</td>
+<td>ask1</td>
+<td>int16</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ask2</td>
+<td>ask2</td>
+<td>int16</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ask3</td>
+<td>ask3</td>
+<td>int16</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">amount</td>
+<td>amount</td>
+<td>float32</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">gave</td>
+<td>gave</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">amountchange</td>
+<td>amountchange</td>
+<td>float32</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">hpa</td>
+<td>hpa</td>
+<td>float32</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ltmedmra</td>
+<td>ltmedmra</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">freq</td>
+<td>freq</td>
+<td>int16</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">years</td>
+<td>years</td>
+<td>float64</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">year5</td>
+<td>year5</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mrm2</td>
+<td>mrm2</td>
+<td>float64</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">dormant</td>
+<td>dormant</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">female</td>
+<td>female</td>
+<td>float64</td>
+<td>2.22</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">couple</td>
+<td>couple</td>
+<td>float64</td>
+<td>2.29</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">state50one</td>
+<td>state50one</td>
+<td>int8</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">nonlit</td>
+<td>nonlit</td>
+<td>float64</td>
+<td>0.90</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">cases</td>
+<td>cases</td>
+<td>float64</td>
+<td>0.90</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">statecnt</td>
+<td>statecnt</td>
+<td>float32</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">stateresponse</td>
+<td>stateresponse</td>
+<td>float32</td>
+<td>0.00</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">stateresponset</td>
+<td>stateresponset</td>
+<td>float32</td>
+<td>0.00</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">stateresponsec</td>
+<td>stateresponsec</td>
+<td>float32</td>
+<td>0.01</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">stateresponsetminc</td>
+<td>stateresponsetminc</td>
+<td>float32</td>
+<td>0.01</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">perbush</td>
+<td>perbush</td>
+<td>float32</td>
+<td>0.07</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">close25</td>
+<td>close25</td>
+<td>float64</td>
+<td>0.07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">red0</td>
+<td>red0</td>
+<td>float64</td>
+<td>0.07</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">blue0</td>
+<td>blue0</td>
+<td>float64</td>
+<td>0.07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">redcty</td>
+<td>redcty</td>
+<td>float64</td>
+<td>0.21</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">bluecty</td>
+<td>bluecty</td>
+<td>float64</td>
+<td>0.21</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">pwhite</td>
+<td>pwhite</td>
+<td>float32</td>
+<td>3.73</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">pblack</td>
+<td>pblack</td>
+<td>float32</td>
+<td>4.07</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">page18_39</td>
+<td>page18_39</td>
+<td>float32</td>
+<td>3.73</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ave_hh_sz</td>
+<td>ave_hh_sz</td>
+<td>float32</td>
+<td>3.72</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">median_hhincome</td>
+<td>median_hhincome</td>
+<td>float64</td>
+<td>3.74</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">powner</td>
+<td>powner</td>
+<td>float32</td>
+<td>3.73</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">psch_atlstba</td>
+<td>psch_atlstba</td>
+<td>float32</td>
+<td>3.73</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">pop_propurban</td>
+<td>pop_propurban</td>
+<td>float32</td>
+<td>3.73</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📈 Summary Statistics for Key Variables
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="0477d240" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="28">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">count</th>
+<th data-quarto-table-cell-role="th">mean</th>
+<th data-quarto-table-cell-role="th">std</th>
+<th data-quarto-table-cell-role="th">min</th>
+<th data-quarto-table-cell-role="th">25%</th>
+<th data-quarto-table-cell-role="th">50%</th>
+<th data-quarto-table-cell-role="th">75%</th>
+<th data-quarto-table-cell-role="th">max</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">treatment</td>
+<td>50083.0</td>
+<td>0.67</td>
+<td>0.47</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">control</td>
+<td>50083.0</td>
+<td>0.33</td>
+<td>0.47</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ratio2</td>
+<td>50083.0</td>
+<td>0.22</td>
+<td>0.42</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ratio3</td>
+<td>50083.0</td>
+<td>0.22</td>
+<td>0.42</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">size25</td>
+<td>50083.0</td>
+<td>0.17</td>
+<td>0.37</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">size50</td>
+<td>50083.0</td>
+<td>0.17</td>
+<td>0.37</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">size100</td>
+<td>50083.0</td>
+<td>0.17</td>
+<td>0.37</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">sizeno</td>
+<td>50083.0</td>
+<td>0.17</td>
+<td>0.37</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>1.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">amount</td>
+<td>50083.0</td>
+<td>0.92</td>
+<td>8.71</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>400.0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="distribution-of-donation-amounts" class="level4">
+<h4 class="anchored" data-anchor-id="distribution-of-donation-amounts">Distribution of Donation Amounts</h4>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+📊 Donation Amount Distributions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="61d3e51d" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-5-output-1.png" width="566" height="374" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 1</strong>: <em>This histogram shows the distribution of donation amounts for individuals who gave a positive amount. The majority of donations are relatively small — mostly under $50 — with a sharp decline in frequency as the donation amount increases. A small number of donors gave over $100, but such large donations are rare.</em></p>
+<hr>
+<div id="8cfd5c8e" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-6-output-1.png" width="565" height="374" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Figure 2</strong>: <em>This figure uses a logarithmic y-axis to better visualize the heavily right-skewed distribution of donation amounts, including those who gave $0. It highlights that most donors either gave nothing or made small contributions (typically under $20), while only a few gave larger amounts. The log scale allows us to observe variation across the full range despite the large number of zero or near-zero donations.</em></p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -198,7 +718,7 @@ Variable Definitions
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -421,6 +941,7 @@ Variable Definitions
 </div>
 </div>
 </div>
+</section>
 </section>
 <section id="balance-test" class="level3">
 <h3 class="anchored" data-anchor-id="balance-test">Balance Test</h3>
