@@ -27,6 +27,7 @@ Sep 2023 – Dec 2023
 
 **Yicun Capital Co., Ltd.** – Project Management Intern  
 *Shanghai | Mar 2024 – Jun 2024*  
+
 - Conducted preliminary evaluations for potential equity investment projects, assessing financial performance, market prospects, and competitive landscape to determine investment potential.
 
 - Provided data-driven insights and analysis to support management’s decision-making on whether to proceed with further due diligence. 
@@ -45,6 +46,7 @@ Sep 2023 – Dec 2023
 ## 🧠 Projects & Leadership
 
 **Creative Gaming Marketing Optimization** *(Feb 2025)*  
+
 - Designed and executed A/B tests, leveraging data analysis to refine targeting strategies and improve ad performance.
 
 - Developed and compared Uplift and Propensity models to predict users' purchase intent based on advertisement placement, increasing purchase intention rates.
@@ -52,11 +54,13 @@ Sep 2023 – Dec 2023
 - Conducted modeling analysis using Pyrsm with logistic regression, neural networks, random forests, and XGBoost, evaluating model effectiveness through AUC, incremental profit calculation, and other key metrics. 
 
 **Intuit QuickBooks Upgrade Campaign** *(Jan 2025)*  
+
 - Developed an optimized email marketing strategy using Logistic Regression and Neural Network models, using AUC, ROME, and profitability calculations to predict which businesses are most likely to purchase upgrades in second email campaigns.
 
 - Collaborated with marketing and product teams to refine customer segmentation and targeting, improving precision in customer outreach. Provided data-driven decision support for target group selection, optimizing marketing effectiveness and corporate profitability.
 
 **Amazon Video Game Ratings Analysis** *(Dec 2024)*  
+
 - Led a project analyzing 27 years (1996–2023) of Amazon customer reviews to predict video game ratings, leveraging data collected by McAuley Lab.
 
 - Cleaned and processed raw data, filtering for meaningful features such as price, platform source (Nintendo, PlayStation, Xbox), review text length, and sentiment indicators. 
@@ -71,12 +75,14 @@ Sep 2023 – Dec 2023
 
 **AWS Industry Research Competition** – Winner  
 *Apr 2022*  
+
 -  Led a 4-member team to complete a comprehensive industry research report within a month, successfully presenting findings in an online pitch and winning the final competition.
 
 - Conducted a macro-level analysis of the renewable energy industry, evaluating global policies on carbon neutrality, market demand for lithium-ion batteries, and the overall industry value chain.Analyzed battery cost reduction strategies by comparing CATL and BYD’s battery designs and supplier strategies.h
 
 **Jacaranda Stock Association** – Research Leader  
 *Aug 2022 – Dec 2023*  
+
 - Organized and managed industry research competitions, enhancing team collaboration and presentation skills.
 
 - Conducted an in-depth analysis of Federal Reserve interest rate hikes, evaluating their impact on the macroeconomy, financial markets, and commodity prices, and presented findings in weekly meetings.
