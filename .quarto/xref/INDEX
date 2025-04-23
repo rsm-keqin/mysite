@@ -37,5 +37,8 @@
   },
   "resume.qmd": {
     "resume.html": "bcd9c80e"
+  },
+  "resume/index.qmd": {
+    "index.html": "e2c6d06a"
   }
 }

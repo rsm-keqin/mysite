@@ -10,7 +10,7 @@ website:
     left:
       - href: index.qmd
         text: About
-      - href: resume.qmd
+      - href: resume/index.qmd
         text: Resume
       - href: blog.qmd
         text: Projects
