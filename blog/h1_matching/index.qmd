@@ -192,8 +192,9 @@ t_test_df = pd.DataFrame.from_dict(t_test_results, orient="index")
 t_test_df.index.name = "Variable"
 t_test_df
 ```
-
+::: {.callout-note}
 **Interpretation**: None of the selected variables show statistically significant differences between treatment and control groups at the 5% level. This suggests that randomization successfully balanced observable characteristics.
+::: 
 
 
 ### Balance Check via Linear Regression
@@ -215,8 +216,9 @@ reg_df = pd.DataFrame.from_dict(reg_results, orient="index")
 reg_df.index.name = "Variable"
 reg_df
 ```
-
+::: {.callout-note}
 **Interpretation**: Consistent with the t-tests, none of the regression coefficients for `treatment` are statistically significant. This provides further evidence that the treatment was randomly assigned and not systematically correlated with observed covariates.
+::: 
 
 **Why include this in the paper?**  
 This type of balance table—commonly shown as Table 1 in field experiment papers—helps build confidence in the internal validity of the study. It reassures readers that any observed treatment effects are likely due to the intervention, not pre-existing differences.
@@ -258,8 +260,9 @@ plt.ylim(0, 0.05)
 plt.tight_layout()
 plt.show()
 ```
-
+::: {.callout-note}
 **Interpretation**: The treatment group had a higher donation rate than the control group. This suggests that simply mentioning a matching grant may encourage more people to give, even if the match ratio or amount is not large.
+:::
 
 ---
 
@@ -293,9 +296,9 @@ pd.DataFrame({
 ols_model = smf.ols("donated ~ treatment", data=df).fit()
 ols_model.summary2().tables[1]
 ```
-
+::: {.callout-note}
 **Interpretation**: The t-test shows a statistically significant difference in donation rates between the treatment and control groups. The linear regression confirms this, with the `treatment` coefficient being positive and significant. These results replicate the finding in Table 2a (Panel A) of the original paper: match offers increase the likelihood of giving.
-
+:::
 *This corresponds to Table 2a, Panel A of Karlan & List (2007), where the estimated treatment effect on donation probability is also positive and statistically significant.*
 
 ---
@@ -311,10 +314,11 @@ import statsmodels.api as sm
 probit_model = smf.probit("donated ~ treatment", data=df).fit()
 probit_model.summary2().tables[1]
 ```
-
+::: {.callout-note}
 **Interpretation**: The probit regression shows a positive and significant coefficient on the treatment variable. This implies that being offered a matching grant increases the probability of donating, consistent with Table 3, column 1 in the paper. The result further supports the idea that behavioral cues—like matching funds—can meaningfully influence charitable behavior.
-
+::: 
 *These results replicate Table 3, Column 1 in Karlan & List (2007), which shows that treatment assignment increases the likelihood of donating.*
+ 
 
 
 ### Differences between Match Rates
@@ -373,8 +377,9 @@ plt.ylim(0, 0.03)
 plt.tight_layout()
 plt.show()
 ```
-
+::: {.callout-note}
 **Interpretation**: Neither the 2:1 nor 3:1 match ratios produced a statistically significant increase in the likelihood of donating compared to the 1:1 ratio. This is consistent with the authors’ comment that "figures suggest" there’s no meaningful difference among match sizes. The barplot confirms that the donation rates are very similar across all match ratio groups, supporting the conclusion that increasing the match ratio does not substantially increase giving.
+::: 
 ---
 
 #### 2. Linear Regression with Match Ratio Indicators
@@ -387,9 +392,10 @@ import statsmodels.formula.api as smf
 model = smf.ols("donated ~ ratio2 + ratio3", data=df).fit()
 model.summary2().tables[1]
 ```
-
+::: {.callout-note}
 **Interpretation**:Although the regression coefficients for `ratio2` and `ratio3` are statistically significant, their magnitudes are very small. This suggests that the increase in matching ratio may have a detectable effect, but not one that is economically meaningful. A 2:1 or 3:1 match offer appears no more motivating than a 1:1 match.  
 *This regression structure corresponds to Table 2a in Karlan & List (2007).*
+::: 
 ---
 
 #### 3. Calculate Differences in Predicted Probabilities
@@ -401,23 +407,23 @@ model.summary2().tables[1]
 # Predict mean donation probability by match ratio group
 group_means = df.groupby(["ratio2", "ratio3"])["donated"].mean().reset_index()
 
-# 添加标签
+# add lable
 group_means["Match Ratio"] = group_means.apply(
     lambda row: "1:1" if row["ratio2"]==0 and row["ratio3"]==0
     else "2:1" if row["ratio2"]==1
     else "3:1", axis=1
 )
 
-# 重命名 donated 列
+# rename donated column
 group_means = group_means.rename(columns={"donated": "Donation Rate"})
 
-# 只显示需要的列
+# show
 group_means[["Match Ratio", "Donation Rate"]]
 ```
-
+::: {.callout-note}
 **Interpretation**: The average donation rates across 1:1, 2:1, and 3:1 groups are nearly identical, with differences under 1 percentage point. This supports the conclusion that higher matching ratios do not meaningfully increase donor participation.
 *This regression structure corresponds to the estimation in Table 2a of Karlan & List (2007).*
-
+::: 
 
 
 ### Size of Charitable Contribution
@@ -436,8 +442,9 @@ import statsmodels.formula.api as smf
 full_ols = smf.ols("amount ~ treatment", data=df).fit()
 full_ols.summary2().tables[1]
 ```
-
+::: {.callout-note}
 **Interpretation**: On the full sample, we find that treatment has a positive and statistically significant effect on donation amounts. However, this is driven by an increase in the likelihood of donating rather than an increase in how much people give once they choose to donate.
+::: 
 
 ---
 
@@ -450,8 +457,9 @@ positive_df = df[df["amount"] > 0]
 cond_ols = smf.ols("amount ~ treatment", data=positive_df).fit()
 cond_ols.summary2().tables[1]
 ```
-
+::: {.callout-note}
 **Interpretation**: Among those who donated, the treatment effect remains positive but is much smaller. This suggests that the match incentive primarily works by encouraging more people to give, not by significantly increasing donation size. Causality is still difficult to assert due to possible selection on unobservables among donors.
+::: 
 
 ---
 
@@ -490,8 +498,9 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 ```
-
+::: {.callout-note}
 **Interpretation**: The histograms show that both treatment and control groups follow a similar donation distribution, with only a small difference in average donation amounts. This visual reinforces the regression results: treatment primarily increases the chance of giving, not the donation size.
+:::
 
 ::: {.callout-tip}
 #### Summary: What Did We Learn?
@@ -513,13 +522,13 @@ Further suppose that the true distribution of respondents who do get a charitabl
 
 ### Law of Large Numbers
 
-_to do:  Make a plot like those on slide 43 from our first class and explain the plot to the reader. To do this, you will simulate 100,00 draws from the control distribution and 10,000 draws from the treatment distribution. You'll then calculate a vector of 10,000 differences, and then you'll plot the cumulative average of that vector of differences. Comment on whether the cumulative average approaches the true difference in means._
-
 ```{python}
 #| echo: false
 #| code-fold: true
 import numpy as np
 import matplotlib.pyplot as plt
+
+np.random.seed(42)
 
 p_control = 0.018
 p_treatment = 0.022
@@ -544,7 +553,7 @@ plt.show()
 
 ::: {.callout-note}
 **Interpretation – LLN**:  
-As the number of simulated draws increases, the cumulative average difference between the treatment and control groups stabilizes around the true value (0.004). This confirms the Law of Large Numbers — with large enough samples, empirical means converge to theoretical expectations.
+This simulation demonstrates the Law of Large Numbers. As the number of simulated observations increases, the cumulative difference between the treatment and control groups quickly stabilizes around the true value (0.004). With a fixed random seed, we observe smoother convergence behavior, reinforcing that with large enough samples, empirical means converge to theoretical expectations.
 :::
 
 ---
@@ -552,7 +561,6 @@ As the number of simulated draws increases, the cumulative average difference be
 
 ### Central Limit Theorem
 
-_to do: Make 4 histograms like those on slide 44 from our first class at sample sizes 50, 200, 500, and 1000 and explain these plots to the reader. To do this for a sample size of e.g. 50, take 50 draws from each of the control and treatment distributions, and calculate the average difference between those draws. Then repeat that process 999 more times so that you have 1000 averages. Plot the histogram of those averages. Comment on whether zero is in the "middle" of the distribution or whether it's in the "tail."_
 ```{python}
 #| echo: false
 #| code-fold: true
