@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - Week1/Kehangqin.pdf
+    - resume/Kehangqin.pdf
 
 website:
   title: "Kehang's Website"
