@@ -1,31 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Katya Qin",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My Projects",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
-  },
-  {
-    "objectID": "blog/project1/index.html",
-    "href": "blog/project1/index.html",
-    "title": "Project 2",
-    "section": "",
-    "text": "I cleaned some data."
-  },
-  {
-    "objectID": "blog/project1/index.html#section-1-data",
-    "href": "blog/project1/index.html#section-1-data",
-    "title": "Project 2",
-    "section": "",
-    "text": "I cleaned some data."
-  },
-  {
-    "objectID": "blog/project1/index.html#section-2-analysis",
-    "href": "blog/project1/index.html#section-2-analysis",
-    "title": "Project 2",
-    "section": "Section 2: Analysis",
-    "text": "Section 2: Analysis\nI analyzed the data.\nimport matplotlib.pyplot as plt import seaborn as sns import pandas as pd\nmtcars = pd.DataFrame({ “wt”: [2.62, 2.875, 2.32, 3.215, 3.44, 3.46, 3.57, 3.19], “mpg”: [21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4] })\nsns.set(style=“whitegrid”) plt.figure(figsize=(8, 5)) sns.scatterplot(x=“wt”, y=“mpg”, data=mtcars) plt.title(“MPG vs Weight”) plt.xlabel(“Weight”) plt.ylabel(“MPG”) plt.tight_layout() plt.show()"
+    "text": "A Replication of Karlan and List (2007)\n\n\n\n\n\n\nKehang Qin\n\n\nApr 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nProject 2\n\n\n\n\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/h1_matching/index.html",
@@ -70,10 +49,31 @@
     "text": "Conclusion\nIn this project, I replicate and explore findings from Karlan and List (2007), who conducted a large-scale natural field experiment to test whether and how charitable giving responds to matching donations.\nMy analysis confirms their key result: simply offering a matching grant significantly increases the likelihood that an individual donates. However, consistent with the paper’s findings, I also find that increasing the match ratio beyond 1:1 (to 2:1 or 3:1) does not lead to higher response rates or larger donations. This suggests that the psychological nudge of a match offer—rather than its financial magnitude—drives behavior.\nFurthermore, while treatment boosts average donation amounts on the full sample, this effect disappears when conditioning on those who gave. This indicates that matching primarily operates on the extensive margin (whether to give), not the intensive margin (how much to give).\nThrough simulation, I also illustrate the Law of Large Numbers and the Central Limit Theorem, showing how statistical inference allows us to draw valid conclusions from randomized experiments.\nTaken together, these results highlight the power of simple behavioral interventions—like a matching message—to shape real-world decision making. At the same time, they reinforce the importance of rigorous experimental design and replication for understanding causal effects in charitable and policy-relevant settings."
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "My Projects",
+    "objectID": "blog/project1/index.html",
+    "href": "blog/project1/index.html",
+    "title": "Project 2",
     "section": "",
-    "text": "A Replication of Karlan and List (2007)\n\n\n\n\n\n\nKehang Qin\n\n\nApr 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nProject 2\n\n\n\n\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "I cleaned some data."
+  },
+  {
+    "objectID": "blog/project1/index.html#section-1-data",
+    "href": "blog/project1/index.html#section-1-data",
+    "title": "Project 2",
+    "section": "",
+    "text": "I cleaned some data."
+  },
+  {
+    "objectID": "blog/project1/index.html#section-2-analysis",
+    "href": "blog/project1/index.html#section-2-analysis",
+    "title": "Project 2",
+    "section": "Section 2: Analysis",
+    "text": "Section 2: Analysis\nI analyzed the data.\nimport matplotlib.pyplot as plt import seaborn as sns import pandas as pd\nmtcars = pd.DataFrame({ “wt”: [2.62, 2.875, 2.32, 3.215, 3.44, 3.46, 3.57, 3.19], “mpg”: [21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4] })\nsns.set(style=“whitegrid”) plt.figure(figsize=(8, 5)) sns.scatterplot(x=“wt”, y=“mpg”, data=mtcars) plt.title(“MPG vs Weight”) plt.xlabel(“Weight”) plt.ylabel(“MPG”) plt.tight_layout() plt.show()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Katya Qin",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   }
 ]
