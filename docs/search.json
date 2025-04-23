@@ -4,7 +4,7 @@
     "href": "blog.html",
     "title": "My Projects",
     "section": "",
-    "text": "A Replication of Karlan and List (2007)\n\n\n\n\n\n\nKehang Qin\n\n\nApr 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nProject 2\n\n\n\n\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "A Replication of Karlan and List (2007)\n\n\n\n\n\n\nKehang Qin\n\n\nApr 23, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nProject 1\n\n\n\n\n\n\n\n\n\nApr 21, 2025\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog/h1_matching/index.html",
@@ -51,21 +51,21 @@
   {
     "objectID": "blog/project1/index.html",
     "href": "blog/project1/index.html",
-    "title": "Project 2",
+    "title": "Project 1",
     "section": "",
     "text": "I cleaned some data."
   },
   {
     "objectID": "blog/project1/index.html#section-1-data",
     "href": "blog/project1/index.html#section-1-data",
-    "title": "Project 2",
+    "title": "Project 1",
     "section": "",
     "text": "I cleaned some data."
   },
   {
     "objectID": "blog/project1/index.html#section-2-analysis",
     "href": "blog/project1/index.html#section-2-analysis",
-    "title": "Project 2",
+    "title": "Project 1",
     "section": "Section 2: Analysis",
     "text": "Section 2: Analysis\nI analyzed the data.\nimport matplotlib.pyplot as plt import seaborn as sns import pandas as pd\nmtcars = pd.DataFrame({ “wt”: [2.62, 2.875, 2.32, 3.215, 3.44, 3.46, 3.57, 3.19], “mpg”: [21.0, 21.0, 22.8, 21.4, 18.7, 18.1, 14.3, 24.4] })\nsns.set(style=“whitegrid”) plt.figure(figsize=(8, 5)) sns.scatterplot(x=“wt”, y=“mpg”, data=mtcars) plt.title(“MPG vs Weight”) plt.xlabel(“Weight”) plt.ylabel(“MPG”) plt.tight_layout() plt.show()"
   },
