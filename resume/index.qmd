@@ -3,4 +3,77 @@ title: "Resume"
 format: html
 ---
 
-<iframe src="/mysite/resume/Kehangqin.pdf" width="100%" height="800px"></iframe>
+# Kehang Qin  
+📍 San Diego, USA | 📞 +1 858-281-3806 | ✉️ qinkh1009@gmail.com  
+
+---
+
+## 🎓 Education
+
+**University of California, San Diego**  
+*M.S. in Business Analytics – Rady School of Management*  
+Jul 2024 – Jun 2025
+
+**University of Melbourne**  
+*B.Com. in Economics*  
+Mar 2021 – Feb 2024
+
+**University of Edinburgh** (Exchange – College of Arts, Humanities, and Social Sciences)  
+Sep 2023 – Dec 2023
+
+---
+
+## 💼 Work Experience
+
+**Yicun Capital Co., Ltd.** – Project Management Intern  
+*Shanghai | Mar 2024 – Jun 2024*  
+- Evaluated equity investment projects (financials, market, competition)  
+- Provided data-driven insights for management decisions  
+- Researched MR hardware market & industry trends  
+
+**Alibaba Consulting** – Market Research Intern  
+*Remote | Nov 2022 – Feb 2023*  
+- Conducted data mining in retail/pharma industries  
+- Built predictive models using SPSS, MATLAB, regression  
+- Generated market reports to support strategy
+
+---
+
+## 🧠 Projects & Leadership
+
+**Creative Gaming Marketing Optimization** *(Feb 2025)*  
+- Built uplift & propensity models for ad strategy  
+- Ran A/B tests to improve targeting & conversion  
+- Used logistic regression, neural nets, XGBoost for modeling  
+
+**Intuit QuickBooks Upgrade Campaign** *(Jan 2025)*  
+- Predicted high-potential customers via logistic/NN models  
+- Applied ROME, AUC, profitability for campaign targeting  
+
+**Amazon Video Game Ratings Analysis** *(Dec 2024)*  
+- Analyzed 27 years of customer reviews  
+- Built baseline & linear regression models  
+- Identified sentiment drivers in game ratings  
+
+---
+
+## 📊 Research Experience
+
+**AWS Industry Research Competition** – Winner  
+*Apr 2022*  
+- Led team in battery industry/lithium value chain analysis  
+- Compared CATL & BYD battery cost strategies  
+- Presented winning pitch
+
+**Jacaranda Stock Association** – Research Leader  
+*Aug 2022 – Dec 2023*  
+- Led macroeconomic & policy research  
+- Presented on Fed interest rate hike impact
+
+---
+
+## 🛠 Skills & Certifications
+
+- Tools: Python, SQL, Tableau, R, Excel, SPSS  
+- Methods: A/B Testing, Propensity Modeling, Business Analytics  
+- Languages: Native Mandarin | Fluent English

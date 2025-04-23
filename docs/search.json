@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "resume/index.html",
+    "href": "resume/index.html",
+    "title": "Resume",
+    "section": "",
+    "text": "📍 San Diego, USA | 📞 +1 858-281-3806 | ✉️ qinkh1009@gmail.com\n\n\n\nUniversity of California, San Diego\nM.S. in Business Analytics – Rady School of Management\nJul 2024 – Jun 2025\nUniversity of Melbourne\nB.Com. in Economics\nMar 2021 – Feb 2024\nUniversity of Edinburgh (Exchange – College of Arts, Humanities, and Social Sciences)\nSep 2023 – Dec 2023\n\n\n\n\nYicun Capital Co., Ltd. – Project Management Intern\nShanghai | Mar 2024 – Jun 2024\n- Evaluated equity investment projects (financials, market, competition)\n- Provided data-driven insights for management decisions\n- Researched MR hardware market & industry trends\nAlibaba Consulting – Market Research Intern\nRemote | Nov 2022 – Feb 2023\n- Conducted data mining in retail/pharma industries\n- Built predictive models using SPSS, MATLAB, regression\n- Generated market reports to support strategy\n\n\n\n\nCreative Gaming Marketing Optimization (Feb 2025)\n- Built uplift & propensity models for ad strategy\n- Ran A/B tests to improve targeting & conversion\n- Used logistic regression, neural nets, XGBoost for modeling\nIntuit QuickBooks Upgrade Campaign (Jan 2025)\n- Predicted high-potential customers via logistic/NN models\n- Applied ROME, AUC, profitability for campaign targeting\nAmazon Video Game Ratings Analysis (Dec 2024)\n- Analyzed 27 years of customer reviews\n- Built baseline & linear regression models\n- Identified sentiment drivers in game ratings\n\n\n\n\nAWS Industry Research Competition – Winner\nApr 2022\n- Led team in battery industry/lithium value chain analysis\n- Compared CATL & BYD battery cost strategies\n- Presented winning pitch\nJacaranda Stock Association – Research Leader\nAug 2022 – Dec 2023\n- Led macroeconomic & policy research\n- Presented on Fed interest rate hike impact\n\n\n\n\n\nTools: Python, SQL, Tableau, R, Excel, SPSS\n\nMethods: A/B Testing, Propensity Modeling, Business Analytics\n\nLanguages: Native Mandarin | Fluent English"
+  },
+  {
+    "objectID": "resume/index.html#education",
+    "href": "resume/index.html#education",
+    "title": "Resume",
+    "section": "",
+    "text": "University of California, San Diego\nM.S. in Business Analytics – Rady School of Management\nJul 2024 – Jun 2025\nUniversity of Melbourne\nB.Com. in Economics\nMar 2021 – Feb 2024\nUniversity of Edinburgh (Exchange – College of Arts, Humanities, and Social Sciences)\nSep 2023 – Dec 2023"
+  },
+  {
+    "objectID": "resume/index.html#work-experience",
+    "href": "resume/index.html#work-experience",
+    "title": "Resume",
+    "section": "",
+    "text": "Yicun Capital Co., Ltd. – Project Management Intern\nShanghai | Mar 2024 – Jun 2024\n- Evaluated equity investment projects (financials, market, competition)\n- Provided data-driven insights for management decisions\n- Researched MR hardware market & industry trends\nAlibaba Consulting – Market Research Intern\nRemote | Nov 2022 – Feb 2023\n- Conducted data mining in retail/pharma industries\n- Built predictive models using SPSS, MATLAB, regression\n- Generated market reports to support strategy"
+  },
+  {
+    "objectID": "resume/index.html#projects-leadership",
+    "href": "resume/index.html#projects-leadership",
+    "title": "Resume",
+    "section": "",
+    "text": "Creative Gaming Marketing Optimization (Feb 2025)\n- Built uplift & propensity models for ad strategy\n- Ran A/B tests to improve targeting & conversion\n- Used logistic regression, neural nets, XGBoost for modeling\nIntuit QuickBooks Upgrade Campaign (Jan 2025)\n- Predicted high-potential customers via logistic/NN models\n- Applied ROME, AUC, profitability for campaign targeting\nAmazon Video Game Ratings Analysis (Dec 2024)\n- Analyzed 27 years of customer reviews\n- Built baseline & linear regression models\n- Identified sentiment drivers in game ratings"
+  },
+  {
+    "objectID": "resume/index.html#research-experience",
+    "href": "resume/index.html#research-experience",
+    "title": "Resume",
+    "section": "",
+    "text": "AWS Industry Research Competition – Winner\nApr 2022\n- Led team in battery industry/lithium value chain analysis\n- Compared CATL & BYD battery cost strategies\n- Presented winning pitch\nJacaranda Stock Association – Research Leader\nAug 2022 – Dec 2023\n- Led macroeconomic & policy research\n- Presented on Fed interest rate hike impact"
+  },
+  {
+    "objectID": "resume/index.html#skills-certifications",
+    "href": "resume/index.html#skills-certifications",
+    "title": "Resume",
+    "section": "",
+    "text": "Tools: Python, SQL, Tableau, R, Excel, SPSS\n\nMethods: A/B Testing, Propensity Modeling, Business Analytics\n\nLanguages: Native Mandarin | Fluent English"
+  },
+  {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "My Projects",
