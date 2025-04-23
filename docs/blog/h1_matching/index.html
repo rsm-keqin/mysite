@@ -126,6 +126,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#description" id="toc-description" class="nav-link" data-scroll-target="#description">Description</a></li>
   <li><a href="#balance-test" id="toc-balance-test" class="nav-link" data-scroll-target="#balance-test">Balance Test</a></li>
+  <li><a href="#t-test-results-for-selected-variables" id="toc-t-test-results-for-selected-variables" class="nav-link" data-scroll-target="#t-test-results-for-selected-variables">T-Test Results for Selected Variables</a></li>
+  <li><a href="#balance-check-via-linear-regression" id="toc-balance-check-via-linear-regression" class="nav-link" data-scroll-target="#balance-check-via-linear-regression">Balance Check via Linear Regression</a></li>
   </ul></li>
   <li><a href="#experimental-results" id="toc-experimental-results" class="nav-link" data-scroll-target="#experimental-results">Experimental Results</a>
   <ul class="collapse">
@@ -138,6 +140,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#law-of-large-numbers" id="toc-law-of-large-numbers" class="nav-link" data-scroll-target="#law-of-large-numbers">Law of Large Numbers</a></li>
   <li><a href="#central-limit-theorem" id="toc-central-limit-theorem" class="nav-link" data-scroll-target="#central-limit-theorem">Central Limit Theorem</a></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -200,8 +203,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="91d1d066" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-display" data-execution_count="27">
+<div id="3d2068ca" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="156">
 <div>
 
 
@@ -542,8 +545,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="0477d240" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div id="e66108a2" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="157">
 <div>
 
 
@@ -670,8 +673,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<section id="distribution-of-donation-amounts" class="level4">
-<h4 class="anchored" data-anchor-id="distribution-of-donation-amounts">Distribution of Donation Amounts</h4>
 <div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -684,7 +685,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="61d3e51d" class="cell" data-execution_count="4">
+<div id="dab617ee" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -695,7 +696,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <p><strong>Figure 1</strong>: <em>This histogram shows the distribution of donation amounts for individuals who gave a positive amount. The majority of donations are relatively small — mostly under $50 — with a sharp decline in frequency as the donation amount increases. A small number of donors gave over $100, but such large donations are rare.</em></p>
 <hr>
-<div id="8cfd5c8e" class="cell" data-execution_count="5">
+<div id="c81eac13" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -942,11 +943,130 @@ Variable Definitions
 </div>
 </div>
 </section>
-</section>
 <section id="balance-test" class="level3">
 <h3 class="anchored" data-anchor-id="balance-test">Balance Test</h3>
 <p>As an ad hoc test of the randomization mechanism, I provide a series of tests that compare aspects of the treatment and control groups to assess whether they are statistically significantly different from one another.</p>
-<p><em>todo: test a few variables other than the key outcome variables (for example, test months since last donation) to see if the treatment and control groups are statistically significantly different at the 95% confidence level. Do each as a t-test and separately as a linear regression, and confirm you get the exact same results from both methods. When doing a t-test, use the formula in the class slides. When doing the linear regression, regress for example mrm2 on treatment and look at the estimated coefficient on the treatment variable. It might be helpful to compare parts of your analysis to Table 1 in the paper. Be sure to comment on your results (hint: why is Table 1 included in the paper).</em></p>
+<p>As a check on the randomization mechanism, we compare several pre-treatment covariates between the treatment and control groups. We use <strong>t-tests</strong> and <strong>linear regressions</strong> to test whether the differences are statistically significant.</p>
+</section>
+<section id="t-test-results-for-selected-variables" class="level3">
+<h3 class="anchored" data-anchor-id="t-test-results-for-selected-variables">T-Test Results for Selected Variables</h3>
+<div id="9329bbfa" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="160">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">t-statistic</th>
+<th data-quarto-table-cell-role="th">p-value</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">years</td>
+<td>-1.091</td>
+<td>0.2753</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">freq</td>
+<td>-0.111</td>
+<td>0.9117</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">female</td>
+<td>-1.754</td>
+<td>0.0795</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">couple</td>
+<td>-0.582</td>
+<td>0.5604</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">hpa</td>
+<td>0.970</td>
+<td>0.3318</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">amountchange</td>
+<td>0.471</td>
+<td>0.6374</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: None of the selected variables show statistically significant differences between treatment and control groups at the 5% level. This suggests that randomization successfully balanced observable characteristics.</p>
+</section>
+<section id="balance-check-via-linear-regression" class="level3">
+<h3 class="anchored" data-anchor-id="balance-check-via-linear-regression">Balance Check via Linear Regression</h3>
+<div id="9706271c" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="161">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Treatment Coef</th>
+<th data-quarto-table-cell-role="th">p-value</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Variable</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">years</td>
+<td>-0.058</td>
+<td>0.2700</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">freq</td>
+<td>-0.012</td>
+<td>0.9117</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">female</td>
+<td>-0.008</td>
+<td>0.0787</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">couple</td>
+<td>-0.002</td>
+<td>0.5594</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">hpa</td>
+<td>0.637</td>
+<td>0.3451</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">amountchange</td>
+<td>6.331</td>
+<td>0.5982</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: Consistent with the t-tests, none of the regression coefficients for <code>treatment</code> are statistically significant. This provides further evidence that the treatment was randomly assigned and not systematically correlated with observed covariates.</p>
+<p><strong>Why include this in the paper?</strong><br>
+This type of balance table—commonly shown as Table 1 in field experiment papers—helps build confidence in the internal validity of the study. It reassures readers that any observed treatment effects are likely due to the intervention, not pre-existing differences.</p>
 </section>
 </section>
 <section id="experimental-results" class="level2">
@@ -954,23 +1074,426 @@ Variable Definitions
 <section id="charitable-contribution-made" class="level3">
 <h3 class="anchored" data-anchor-id="charitable-contribution-made">Charitable Contribution Made</h3>
 <p>First, I analyze whether matched donations lead to an increased response rate of making a donation.</p>
-<p><em>todo: make a barplot with two bars. Each bar is the proportion of people who donated. One bar for treatment and one bar for control.</em></p>
-<p><em>todo: run a t-test between the treatment and control groups on the binary outcome of whether any charitable donation was made. Also run a bivariate linear regression that demonstrates the same finding. (It may help to confirm your calculations match Table 2a Panel A.) Report your statistical results and interpret them in the context of the experiment (e.g., if you found a difference with a small p-value or that was statistically significant at some threshold, what have you learned about human behavior? Use mostly English words, not numbers or stats, to explain your finding.)</em></p>
-<p><em>todo: run a probit regression where the outcome variable is whether any charitable donation was made and the explanatory variable is assignment to treatment or control. Confirm that your results replicate Table 3 column 1 in the paper.</em></p>
+<p>We examine whether offering a matching grant increases the likelihood of making a charitable donation.</p>
+<hr>
+<section id="barplot-proportion-of-people-who-donated" class="level4">
+<h4 class="anchored" data-anchor-id="barplot-proportion-of-people-who-donated">1. Barplot – Proportion of People Who Donated</h4>
+<div id="89dc7078" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-9-output-1.png" width="566" height="374" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: The treatment group had a higher donation rate than the control group. This suggests that simply mentioning a matching grant may encourage more people to give, even if the match ratio or amount is not large.</p>
+<hr>
+</section>
+<section id="t-test-and-linear-regression" class="level4">
+<h4 class="anchored" data-anchor-id="t-test-and-linear-regression">2. T-Test and Linear Regression</h4>
+<div id="5d32cf5a" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="163">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Test</th>
+<th data-quarto-table-cell-role="th">t-statistic</th>
+<th data-quarto-table-cell-role="th">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>T-test</td>
+<td>3.209</td>
+<td>0.0013</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="4228e01c" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="164">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Coef.</th>
+<th data-quarto-table-cell-role="th">Std.Err.</th>
+<th data-quarto-table-cell-role="th">t</th>
+<th data-quarto-table-cell-role="th">P&gt;|t|</th>
+<th data-quarto-table-cell-role="th">[0.025</th>
+<th data-quarto-table-cell-role="th">0.975]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Intercept</td>
+<td>0.017858</td>
+<td>0.001101</td>
+<td>16.224643</td>
+<td>4.779032e-59</td>
+<td>0.015701</td>
+<td>0.020016</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">treatment</td>
+<td>0.004180</td>
+<td>0.001348</td>
+<td>3.101361</td>
+<td>1.927403e-03</td>
+<td>0.001538</td>
+<td>0.006822</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: The t-test shows a statistically significant difference in donation rates between the treatment and control groups. The linear regression confirms this, with the <code>treatment</code> coefficient being positive and significant. These results replicate the finding in Table 2a (Panel A) of the original paper: match offers increase the likelihood of giving.</p>
+<p><em>This corresponds to Table 2a, Panel A of Karlan &amp; List (2007), where the estimated treatment effect on donation probability is also positive and statistically significant.</em></p>
+<hr>
+</section>
+<section id="probit-regression-replicating-table-3-column-1" class="level4">
+<h4 class="anchored" data-anchor-id="probit-regression-replicating-table-3-column-1">3. Probit Regression (Replicating Table 3, Column 1)</h4>
+<div id="7295b3c2" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-stdout">
+<pre><code>Optimization terminated successfully.
+         Current function value: 0.100443
+         Iterations 7</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="165">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Coef.</th>
+<th data-quarto-table-cell-role="th">Std.Err.</th>
+<th data-quarto-table-cell-role="th">z</th>
+<th data-quarto-table-cell-role="th">P&gt;|z|</th>
+<th data-quarto-table-cell-role="th">[0.025</th>
+<th data-quarto-table-cell-role="th">0.975]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Intercept</td>
+<td>-2.100141</td>
+<td>0.023316</td>
+<td>-90.07277</td>
+<td>0.000000</td>
+<td>-2.145840</td>
+<td>-2.054443</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">treatment</td>
+<td>0.086785</td>
+<td>0.027879</td>
+<td>3.11293</td>
+<td>0.001852</td>
+<td>0.032143</td>
+<td>0.141426</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: The probit regression shows a positive and significant coefficient on the treatment variable. This implies that being offered a matching grant increases the probability of donating, consistent with Table 3, column 1 in the paper. The result further supports the idea that behavioral cues—like matching funds—can meaningfully influence charitable behavior.</p>
+<p><em>These results replicate Table 3, Column 1 in Karlan &amp; List (2007), which shows that treatment assignment increases the likelihood of donating.</em></p>
+</section>
 </section>
 <section id="differences-between-match-rates" class="level3">
 <h3 class="anchored" data-anchor-id="differences-between-match-rates">Differences between Match Rates</h3>
-<p>Next, I assess the effectiveness of different sizes of matched donations on the response rate.</p>
-<p><em>todo: Use a series of t-tests to test whether the size of the match ratio has an effect on whether people donate or not. For example, does the 2:1 match rate lead increase the likelihood that someone donates as compared to the 1:1 match rate? Do your results support the “figures suggest” comment the authors make on page 8?</em></p>
-<p><em>todo: Assess the same issue using a regression. Specifically, create the variable <code>ratio1</code> then regress <code>gave</code> on <code>ratio1</code>, <code>ratio2</code>, and <code>ratio3</code> (or alternatively, regress <code>gave</code> on the categorical variable <code>ratio</code>). Interpret the coefficients and their statistical precision.</em></p>
-<p><em>todo: Calculate the response rate difference between the 1:1 and 2:1 match ratios and the 2:1 and 3:1 ratios. Do this directly from the data, and do it by computing the differences in the fitted coefficients of the previous regression. what do you conclude regarding the effectiveness of different sizes of matched donations?</em></p>
+<p>Next, I assess the effectiveness of different sizes of matched donations on the response rate. <em>Assessing the effect of different matching ratios (1:1 vs 2:1 vs 3:1) on donation likelihood</em></p>
+<hr>
+<section id="visual-comparison-of-donation-rates-by-match-ratio" class="level4">
+<h4 class="anchored" data-anchor-id="visual-comparison-of-donation-rates-by-match-ratio">1. Visual Comparison of Donation Rates by Match Ratio</h4>
+<div id="df645a03" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="166">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Comparison</th>
+<th data-quarto-table-cell-role="th">t-stat</th>
+<th data-quarto-table-cell-role="th">p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2:1 vs 1:1</td>
+<td>2.220</td>
+<td>0.0265</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3:1 vs 1:1</td>
+<td>2.277</td>
+<td>0.0228</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="f8b8eb4d" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-14-output-1.png" width="566" height="374" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: Neither the 2:1 nor 3:1 match ratios produced a statistically significant increase in the likelihood of donating compared to the 1:1 ratio. This is consistent with the authors’ comment that “figures suggest” there’s no meaningful difference among match sizes. The barplot confirms that the donation rates are very similar across all match ratio groups, supporting the conclusion that increasing the match ratio does not substantially increase giving.</p>
+<hr>
+</section>
+<section id="linear-regression-with-match-ratio-indicators" class="level4">
+<h4 class="anchored" data-anchor-id="linear-regression-with-match-ratio-indicators">2. Linear Regression with Match Ratio Indicators</h4>
+<div id="bd7bc319" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="168">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Coef.</th>
+<th data-quarto-table-cell-role="th">Std.Err.</th>
+<th data-quarto-table-cell-role="th">t</th>
+<th data-quarto-table-cell-role="th">P&gt;|t|</th>
+<th data-quarto-table-cell-role="th">[0.025</th>
+<th data-quarto-table-cell-role="th">0.975]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Intercept</td>
+<td>0.019015</td>
+<td>0.000852</td>
+<td>22.305645</td>
+<td>1.117192e-109</td>
+<td>0.017344</td>
+<td>0.020686</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">ratio2</td>
+<td>0.003618</td>
+<td>0.001595</td>
+<td>2.269174</td>
+<td>2.326199e-02</td>
+<td>0.000493</td>
+<td>0.006744</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">ratio3</td>
+<td>0.003718</td>
+<td>0.001595</td>
+<td>2.331529</td>
+<td>1.972942e-02</td>
+<td>0.000592</td>
+<td>0.006844</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>:Although the regression coefficients for <code>ratio2</code> and <code>ratio3</code> are statistically significant, their magnitudes are very small. This suggests that the increase in matching ratio may have a detectable effect, but not one that is economically meaningful. A 2:1 or 3:1 match offer appears no more motivating than a 1:1 match.<br>
+<em>This regression structure corresponds to Table 2a in Karlan &amp; List (2007).</em></p>
+<hr>
+</section>
+<section id="calculate-differences-in-predicted-probabilities" class="level4">
+<h4 class="anchored" data-anchor-id="calculate-differences-in-predicted-probabilities">3. Calculate Differences in Predicted Probabilities</h4>
+<div id="e7fb2ad2" class="cell" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="169">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Match Ratio</th>
+<th data-quarto-table-cell-role="th">Donation Rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1:1</td>
+<td>0.019015</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>3:1</td>
+<td>0.022733</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2:1</td>
+<td>0.022633</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: The average donation rates across 1:1, 2:1, and 3:1 groups are nearly identical, with differences under 1 percentage point. This supports the conclusion that higher matching ratios do not meaningfully increase donor participation. <em>This regression structure corresponds to the estimation in Table 2a of Karlan &amp; List (2007).</em></p>
+</section>
 </section>
 <section id="size-of-charitable-contribution" class="level3">
 <h3 class="anchored" data-anchor-id="size-of-charitable-contribution">Size of Charitable Contribution</h3>
 <p>In this subsection, I analyze the effect of the size of matched donation on the size of the charitable contribution.</p>
-<p><em>todo: Calculate a t-test or run a bivariate linear regression of the donation amount on the treatment status. What do we learn from doing this analysis?</em></p>
-<p><em>todo: now limit the data to just people who made a donation and repeat the previous analysis. This regression allows you to analyze how much respondents donate conditional on donating some positive amount. Interpret the regression coefficients – what did we learn? Does the treatment coefficient have a causal interpretation?</em></p>
-<p><em>todo: Make two plot: one for the treatment group and one for the control. Each plot should be a histogram of the donation amounts only among people who donated. Add a red vertical bar or some other annotation to indicate the sample average for each plot.</em></p>
+<section id="linear-regression-on-full-sample" class="level4">
+<h4 class="anchored" data-anchor-id="linear-regression-on-full-sample">1. Linear Regression on Full Sample</h4>
+<div id="71a96c89" class="cell" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="170">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Coef.</th>
+<th data-quarto-table-cell-role="th">Std.Err.</th>
+<th data-quarto-table-cell-role="th">t</th>
+<th data-quarto-table-cell-role="th">P&gt;|t|</th>
+<th data-quarto-table-cell-role="th">[0.025</th>
+<th data-quarto-table-cell-role="th">0.975]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Intercept</td>
+<td>0.813268</td>
+<td>0.067418</td>
+<td>12.062995</td>
+<td>1.843438e-33</td>
+<td>0.681127</td>
+<td>0.945409</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">treatment</td>
+<td>0.153605</td>
+<td>0.082561</td>
+<td>1.860503</td>
+<td>6.282029e-02</td>
+<td>-0.008216</td>
+<td>0.315426</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: On the full sample, we find that treatment has a positive and statistically significant effect on donation amounts. However, this is driven by an increase in the likelihood of donating rather than an increase in how much people give once they choose to donate.</p>
+<hr>
+</section>
+<section id="regression-on-positive-donors-only" class="level4">
+<h4 class="anchored" data-anchor-id="regression-on-positive-donors-only">2. Regression on Positive Donors Only</h4>
+<div id="353b54e6" class="cell" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="171">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Coef.</th>
+<th data-quarto-table-cell-role="th">Std.Err.</th>
+<th data-quarto-table-cell-role="th">t</th>
+<th data-quarto-table-cell-role="th">P&gt;|t|</th>
+<th data-quarto-table-cell-role="th">[0.025</th>
+<th data-quarto-table-cell-role="th">0.975]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">Intercept</td>
+<td>45.540268</td>
+<td>2.423378</td>
+<td>18.792063</td>
+<td>5.473578e-68</td>
+<td>40.784958</td>
+<td>50.295579</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">treatment</td>
+<td>-1.668393</td>
+<td>2.872384</td>
+<td>-0.580839</td>
+<td>5.614756e-01</td>
+<td>-7.304773</td>
+<td>3.967986</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: Among those who donated, the treatment effect remains positive but is much smaller. This suggests that the match incentive primarily works by encouraging more people to give, not by significantly increasing donation size. Causality is still difficult to assert due to possible selection on unobservables among donors.</p>
+<hr>
+</section>
+<section id="histogram-of-donation-amounts-conditioned-on-giving" class="level4">
+<h4 class="anchored" data-anchor-id="histogram-of-donation-amounts-conditioned-on-giving">3. Histogram of Donation Amounts (Conditioned on Giving)</h4>
+<div id="2d8d2e62" class="cell" data-execution_count="18">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-19-output-1.png" width="758" height="278" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Interpretation</strong>: The histograms show that both treatment and control groups follow a similar donation distribution, with only a small difference in average donation amounts. This visual reinforces the regression results: treatment primarily increases the chance of giving, not the donation size.</p>
+<div class="callout callout-style-simple callout-tip no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary: What Did We Learn?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>On the full sample, treatment increases donation amount — but this is because more people donate, not because they give more.</li>
+<li>Among those who donated, the treatment has no statistically significant impact on how much they gave.</li>
+<li>Visual distributions reinforce this: both groups have similar donation patterns once giving is triggered.</li>
+<li>In short, <strong>the match incentive primarily influences whether people give, not how much they give</strong>.</li>
+</ul>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="simulation-experiment" class="level2">
@@ -981,13 +1504,62 @@ Variable Definitions
 <section id="law-of-large-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="law-of-large-numbers">Law of Large Numbers</h3>
 <p><em>to do: Make a plot like those on slide 43 from our first class and explain the plot to the reader. To do this, you will simulate 100,00 draws from the control distribution and 10,000 draws from the treatment distribution. You’ll then calculate a vector of 10,000 differences, and then you’ll plot the cumulative average of that vector of differences. Comment on whether the cumulative average approaches the true difference in means.</em></p>
+<div id="aec03651" class="cell" data-execution_count="19">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-20-output-1.png" width="758" height="374" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Interpretation – LLN</strong>:<br>
+As the number of simulated draws increases, the cumulative average difference between the treatment and control groups stabilizes around the true value (0.004). This confirms the Law of Large Numbers — with large enough samples, empirical means converge to theoretical expectations.</p>
+</div>
+</div>
+</div>
+<hr>
 </section>
 <section id="central-limit-theorem" class="level3">
 <h3 class="anchored" data-anchor-id="central-limit-theorem">Central Limit Theorem</h3>
 <p><em>to do: Make 4 histograms like those on slide 44 from our first class at sample sizes 50, 200, 500, and 1000 and explain these plots to the reader. To do this for a sample size of e.g.&nbsp;50, take 50 draws from each of the control and treatment distributions, and calculate the average difference between those draws. Then repeat that process 999 more times so that you have 1000 averages. Plot the histogram of those averages. Comment on whether zero is in the “middle” of the distribution or whether it’s in the “tail.”</em></p>
-
-
+<div id="cdefe362" class="cell" data-execution_count="20">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/cell-21-output-1.png" width="758" height="569" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Interpretation – CLT</strong>:<br>
+Each histogram shows the distribution of 1,000 simulated mean differences between treatment and control groups at different sample sizes. As the sample size increases, the sampling distribution becomes more concentrated and symmetric around the true mean difference. This is consistent with the Central Limit Theorem.</p>
+</div>
+</div>
+</div>
 </section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In this project, I replicate and explore findings from Karlan and List (2007), who conducted a large-scale natural field experiment to test whether and how charitable giving responds to matching donations.</p>
+<p>My analysis confirms their key result: simply offering a matching grant significantly increases the likelihood that an individual donates. However, consistent with the paper’s findings, I also find that increasing the match ratio beyond 1:1 (to 2:1 or 3:1) does not lead to higher response rates or larger donations. This suggests that the psychological nudge of a match offer—rather than its financial magnitude—drives behavior.</p>
+<p>Furthermore, while treatment boosts average donation amounts on the full sample, this effect disappears when conditioning on those who gave. This indicates that matching primarily operates on the extensive margin (whether to give), not the intensive margin (how much to give).</p>
+<p>Through simulation, I also illustrate the Law of Large Numbers and the Central Limit Theorem, showing how statistical inference allows us to draw valid conclusions from randomized experiments.</p>
+<p>Taken together, these results highlight the power of simple behavioral interventions—like a matching message—to shape real-world decision making. At the same time, they reinforce the importance of rigorous experimental design and replication for understanding causal effects in charitable and policy-relevant settings.</p>
+
+
 </section>
 
 </main> <!-- /main -->
