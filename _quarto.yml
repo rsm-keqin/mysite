@@ -4,6 +4,7 @@ project:
   resources:
     - resume/Kehangqin.pdf
 
+
 website:
   title: "Kehang's Website"
   navbar:
