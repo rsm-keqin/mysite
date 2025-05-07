@@ -3,6 +3,7 @@
     "listing": "/blog.html",
     "items": [
       "/blog/h1_matching/index.html",
+      "/blog/h2_matching/index.html",
       "/blog/project1/index.html"
     ]
   }

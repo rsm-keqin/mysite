@@ -40,5 +40,8 @@
   },
   "resume/index.qmd": {
     "index.html": "e2c6d06a"
+  },
+  "blog/h2_matching/index.qmd": {
+    "index.html": "3b3c58ad"
   }
 }
