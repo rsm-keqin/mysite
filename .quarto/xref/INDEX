@@ -43,5 +43,8 @@
   },
   "blog/h2_matching/index.qmd": {
     "index.html": "3b3c58ad"
+  },
+  "blog/h3_matching/index.qmd": {
+    "index.html": "969f7a75"
   }
 }

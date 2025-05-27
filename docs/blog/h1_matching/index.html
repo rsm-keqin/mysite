@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kehang Qin">
-<meta name="dcterms.date" content="2025-05-07">
+<meta name="dcterms.date" content="2025-05-27">
 
 <title>A Replication of Karlan and List (2007) – Kehang’s Website</title>
 <style>
@@ -200,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 7, 2025</p>
+      <p class="date">May 27, 2025</p>
     </div>
   </div>
   
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="description" class="level3">
 <h3 class="anchored" data-anchor-id="description">Description</h3>
 <p>This dataset includes 50,083 observations from a field experiment conducted by Karlan and List (2007). Each observation represents a previous donor to a liberal nonprofit organization in the U.S., who received a fundraising letter with randomized treatments. The variables cover experimental assignments (e.g., matching ratios and amounts), donation responses, and background characteristics such as donation history, gender, and zip-code–level census data.</p>
-<div id="403b4930" class="cell" data-execution_count="1">
+<div id="80dcbf9a" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="c55bda12" class="cell" data-execution_count="2">
+<div id="b66a099a" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>summary_table <span class="op">=</span> pd.DataFrame({</span>
@@ -599,7 +599,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="6135ca24" class="cell" data-execution_count="3">
+<div id="3ec5109d" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>key_vars <span class="op">=</span> [<span class="st">"treatment"</span>, <span class="st">"control"</span>, <span class="st">"ratio2"</span>, <span class="st">"ratio3"</span>, <span class="st">"size25"</span>, <span class="st">"size50"</span>, <span class="st">"size100"</span>, <span class="st">"sizeno"</span>, <span class="st">"amount"</span>]</span>
@@ -744,7 +744,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="17bc3774" class="cell" data-execution_count="4">
+<div id="6306cb6c" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 1: Positive Donor Distribution</span></span>
@@ -766,7 +766,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p><strong>Figure 1</strong>: <em>This histogram shows the distribution of donation amounts for individuals who gave a positive amount. The majority of donations are relatively small — mostly under $50 — with a sharp decline in frequency as the donation amount increases. A small number of donors gave over $100, but such large donations are rare.</em></p>
 <hr>
-<div id="7429bb9c" class="cell" data-execution_count="5">
+<div id="b22b79e2" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Figure 2: Logarithmic scale showing all donations (including 0)</span></span>
@@ -1032,7 +1032,7 @@ Variable Definitions
 </section>
 <section id="t-test-results-for-selected-variables" class="level3">
 <h3 class="anchored" data-anchor-id="t-test-results-for-selected-variables">T-Test Results for Selected Variables</h3>
-<div id="d6e23de5" class="cell" data-execution_count="6">
+<div id="1889960d" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
@@ -1120,7 +1120,7 @@ Variable Definitions
 </section>
 <section id="balance-check-via-linear-regression" class="level3">
 <h3 class="anchored" data-anchor-id="balance-check-via-linear-regression">Balance Check via Linear Regression</h3>
-<div id="68bd18cd" class="cell" data-execution_count="7">
+<div id="bb08e645" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.formula.api <span class="im">as</span> smf</span>
@@ -1215,7 +1215,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 <hr>
 <section id="barplot-proportion-of-people-who-donated" class="level4">
 <h4 class="anchored" data-anchor-id="barplot-proportion-of-people-who-donated">1. Barplot – Proportion of People Who Donated</h4>
-<div id="715a9b3d" class="cell" data-execution_count="8">
+<div id="4f156ab0" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
@@ -1256,7 +1256,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </section>
 <section id="t-test-and-linear-regression" class="level4">
 <h4 class="anchored" data-anchor-id="t-test-and-linear-regression">2. T-Test and Linear Regression</h4>
-<div id="df7a9c76" class="cell" data-execution_count="9">
+<div id="3c04d169" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> ttest_ind</span>
@@ -1300,7 +1300,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </div>
 </div>
 </div>
-<div id="f9bbea1d" class="cell" data-execution_count="10">
+<div id="a20b61b7" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Linear regression (OLS)</span></span>
@@ -1363,7 +1363,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </section>
 <section id="probit-regression-replicating-table-3-column-1" class="level4">
 <h4 class="anchored" data-anchor-id="probit-regression-replicating-table-3-column-1">3. Probit Regression (Replicating Table 3, Column 1)</h4>
-<div id="e0457a2c" class="cell" data-execution_count="11">
+<div id="fc6b4a90" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -1436,7 +1436,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 <hr>
 <section id="visual-comparison-of-donation-rates-by-match-ratio" class="level4">
 <h4 class="anchored" data-anchor-id="visual-comparison-of-donation-rates-by-match-ratio">1. Visual Comparison of Donation Rates by Match Ratio</h4>
-<div id="8046ae90" class="cell" data-execution_count="12">
+<div id="a36c4d47" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"donated"</span>] <span class="op">=</span> (df[<span class="st">"amount"</span>] <span class="op">&gt;</span> <span class="dv">0</span>).astype(<span class="bu">int</span>)</span>
@@ -1484,7 +1484,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </div>
 </div>
 </div>
-<div id="8391b146" class="cell" data-execution_count="13">
+<div id="bedc371f" class="cell" data-execution_count="13">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"match_ratio"</span>] <span class="op">=</span> df.<span class="bu">apply</span>(</span>
@@ -1526,7 +1526,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </section>
 <section id="linear-regression-with-match-ratio-indicators" class="level4">
 <h4 class="anchored" data-anchor-id="linear-regression-with-match-ratio-indicators">2. Linear Regression with Match Ratio Indicators</h4>
-<div id="d8bdc36b" class="cell" data-execution_count="14">
+<div id="ddc90eaf" class="cell" data-execution_count="14">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> smf.ols(<span class="st">"donated ~ ratio2 + ratio3"</span>, data<span class="op">=</span>df).fit()</span>
@@ -1597,7 +1597,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </section>
 <section id="calculate-differences-in-predicted-probabilities" class="level4">
 <h4 class="anchored" data-anchor-id="calculate-differences-in-predicted-probabilities">3. Calculate Differences in Predicted Probabilities</h4>
-<div id="2f939f51" class="cell" data-execution_count="15">
+<div id="f5adac6a" class="cell" data-execution_count="15">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Predict mean donation probability by match ratio group</span></span>
@@ -1664,7 +1664,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 <p>In this subsection, I analyze the effect of the size of matched donation on the size of the charitable contribution.</p>
 <section id="linear-regression-on-full-sample" class="level4">
 <h4 class="anchored" data-anchor-id="linear-regression-on-full-sample">1. Linear Regression on Full Sample</h4>
-<div id="8bb2eef6" class="cell" data-execution_count="16">
+<div id="57e59880" class="cell" data-execution_count="16">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"donated"</span>] <span class="op">=</span> (df[<span class="st">"amount"</span>] <span class="op">&gt;</span> <span class="dv">0</span>).astype(<span class="bu">int</span>)</span>
@@ -1727,7 +1727,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </section>
 <section id="regression-on-positive-donors-only" class="level4">
 <h4 class="anchored" data-anchor-id="regression-on-positive-donors-only">2. Regression on Positive Donors Only</h4>
-<div id="1d5c1d3a" class="cell" data-execution_count="17">
+<div id="80f5169e" class="cell" data-execution_count="17">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>positive_df <span class="op">=</span> df[df[<span class="st">"amount"</span>] <span class="op">&gt;</span> <span class="dv">0</span>]</span>
@@ -1789,7 +1789,7 @@ This type of balance table—commonly shown as Table 1 in field experiment paper
 </section>
 <section id="histogram-of-donation-amounts-conditioned-on-giving" class="level4">
 <h4 class="anchored" data-anchor-id="histogram-of-donation-amounts-conditioned-on-giving">3. Histogram of Donation Amounts (Conditioned on Giving)</h4>
-<div id="1602cb56" class="cell" data-execution_count="18">
+<div id="406bfe17" class="cell" data-execution_count="18">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>treatment_group <span class="op">=</span> positive_df[positive_df[<span class="st">"treatment"</span>] <span class="op">==</span> <span class="dv">1</span>][<span class="st">"amount"</span>]</span>
@@ -1862,7 +1862,7 @@ Summary: What Did We Learn?
 <p>Further suppose that the true distribution of respondents who do get a charitable donation match of any size is Bernoulli with probability p=0.022 that a donation is made.</p>
 <section id="law-of-large-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="law-of-large-numbers">Law of Large Numbers</h3>
-<div id="639d2cc2" class="cell" data-execution_count="19">
+<div id="299121b6" class="cell" data-execution_count="19">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
@@ -1908,7 +1908,7 @@ This simulation demonstrates the Law of Large Numbers. As the number of simulate
 </section>
 <section id="central-limit-theorem" class="level3">
 <h3 class="anchored" data-anchor-id="central-limit-theorem">Central Limit Theorem</h3>
-<div id="938390ef" class="cell" data-execution_count="20">
+<div id="b51c5a7c" class="cell" data-execution_count="20">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>p_c, p_t <span class="op">=</span> <span class="fl">0.018</span>, <span class="fl">0.022</span></span>
