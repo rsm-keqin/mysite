@@ -34,8 +34,6 @@ boundary = np.sin(4 * x1) + x1
 y = np.where(x2 > boundary, 1, 0).astype(str)
 dat = pd.DataFrame({'x1': x1, 'x2': x2, 'y': y})
 ```
-::::
-
 
 _todo: plot the data where the horizontal axis is `x1`, the vertical axis is `x2`, and the points are colored by the value of `y`.  You may optionally draw the wiggly boundary._
 
