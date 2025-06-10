@@ -42,7 +42,7 @@ _todo: generate a test dataset with 100 points, using the same code as above but
 _todo: implement KNN by hand.  Check you work with a built-in function -- eg, `class::knn()` or `caret::train(method="knn")` in R, or scikit-learn's `KNeighborsClassifier` in Python._
 
 _todo: run your function for k=1,...,k=30, each time noting the percentage of correctly-classified points from the test dataset. Plot the results, where the horizontal axis is 1-30 and the vertical axis is the percentage of correctly-classified points. What is the optimal value of k as suggested by your plot?_ 
-:::
+::::
 
 
 ## 1b. Latent-Class MNL

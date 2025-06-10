@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Kehang">
-<meta name="dcterms.date" content="2025-06-10">
+<meta name="dcterms.date" content="2025-06-11">
 
 <title>Poisson Regression Examples – Kehang’s Website</title>
 <style>
@@ -224,7 +224,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 10, 2025</p>
+      <p class="date">June 11, 2025</p>
     </div>
   </div>
   
@@ -247,7 +247,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="data">Data</h3>
 <section id="read-in-data." class="level4">
 <h4 class="anchored" data-anchor-id="read-in-data.">Read in data.</h4>
-<div id="1da23337" class="cell" data-execution_count="1">
+<div id="e7e50e06" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -353,7 +353,7 @@ window.Quarto = {
 <section id="comparison-of-patent-output-by-customer-status" class="level4">
 <h4 class="anchored" data-anchor-id="comparison-of-patent-output-by-customer-status">Comparison of Patent Output by Customer Status</h4>
 <p>To assess whether Blueprinty customers tend to produce more patents, we examine the distribution and average number of patents awarded over the last five years by customer status.</p>
-<div id="cbbfb446" class="cell" data-execution_count="2">
+<div id="ab079c94" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(data<span class="op">=</span>df, x<span class="op">=</span><span class="st">"patents"</span>, hue<span class="op">=</span><span class="st">"iscustomer"</span>, multiple<span class="op">=</span><span class="st">"dodge"</span>, palette<span class="op">=</span><span class="st">"Set2"</span>, kde<span class="op">=</span><span class="va">False</span>)</span>
@@ -422,7 +422,7 @@ window.Quarto = {
 <section id="comparing-age-and-regional-distribution-by-customer-status" class="level4">
 <h4 class="anchored" data-anchor-id="comparing-age-and-regional-distribution-by-customer-status">Comparing Age and Regional Distribution by Customer Status</h4>
 <p>We explore whether Blueprinty customers differ systematically in their <strong>firm age</strong> or <strong>region</strong> relative to non-customers. If so, this may confound the relationship between customer status and patent output.</p>
-<div id="7313dc57" class="cell" data-execution_count="3">
+<div id="c7c97dea" class="cell" data-execution_count="3">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Region counts</span></span>
@@ -531,7 +531,7 @@ f(Y_i \mid \lambda) = \frac{e^{-\lambda} \lambda^{Y_i}}{Y_i!}
 </section>
 <section id="poisson-log-likelihood-function" class="level4">
 <h4 class="anchored" data-anchor-id="poisson-log-likelihood-function">Poisson Log-Likelihood Function</h4>
-<div id="06fc5a89" class="cell" data-execution_count="4">
+<div id="4f03d8c0" class="cell" data-execution_count="4">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> gammaln  </span>
@@ -556,7 +556,7 @@ f(Y_i \mid \lambda) = \frac{e^{-\lambda} \lambda^{Y_i}}{Y_i!}
 <section id="visualizing-and-finding-the-mle-for-λ-in-poisson-model" class="level4">
 <h4 class="anchored" data-anchor-id="visualizing-and-finding-the-mle-for-λ-in-poisson-model">Visualizing and Finding the MLE for λ in Poisson Model</h4>
 <p>We evaluate and visualize the log-likelihood function over a range of λ values and compare the theoretical MLE (sample mean) with the numerically optimized one.</p>
-<div id="fcdc6c7b" class="cell" data-execution_count="5">
+<div id="e3e947fd" class="cell" data-execution_count="5">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> gammaln</span>
@@ -631,7 +631,7 @@ f(Y_i \mid \lambda) = \frac{e^{-\lambda} \lambda^{Y_i}}{Y_i!}
 <section id="maximum-likelihood-estimation-numerical-optimization" class="level4">
 <h4 class="anchored" data-anchor-id="maximum-likelihood-estimation-numerical-optimization">Maximum Likelihood Estimation (Numerical Optimization)</h4>
 <p>We now use numerical optimization to find the λ that maximizes the Poisson log-likelihood.</p>
-<div id="63f168c7" class="cell" data-execution_count="6">
+<div id="f9857bc2" class="cell" data-execution_count="6">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.optimize <span class="im">import</span> minimize_scalar</span>
@@ -677,7 +677,7 @@ Log-likelihood at MLE: -3367.68</code></pre>
 <section id="estimation-of-poisson-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="estimation-of-poisson-regression-model">Estimation of Poisson Regression Model</h3>
 <p>Next, we extend our simple Poisson model to a Poisson Regression Model such that <span class="math inline">\(Y_i = \text{Poisson}(\lambda_i)\)</span> where <span class="math inline">\(\lambda_i = \exp(X_i'\beta)\)</span>. The interpretation is that the success rate of patent awards is not constant across all firms (<span class="math inline">\(\lambda\)</span>) but rather is a function of firm characteristics <span class="math inline">\(X_i\)</span>. Specifically, we will use the covariates age, age squared, region, and whether the firm is a customer of Blueprinty.</p>
-<div id="fca6411b" class="cell" data-execution_count="7">
+<div id="dc7762b6" class="cell" data-execution_count="7">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.special <span class="im">import</span> gammaln</span>
@@ -689,7 +689,7 @@ Log-likelihood at MLE: -3367.68</code></pre>
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="op">-</span>np.<span class="bu">sum</span>(<span class="op">-</span>lambdas <span class="op">+</span> y <span class="op">*</span> linpred <span class="op">-</span> gammaln(y <span class="op">+</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="7c295bb3" class="cell" data-execution_count="8">
+<div id="dcfd8bde" class="cell" data-execution_count="8">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
@@ -815,7 +815,7 @@ The results match almost exactly, confirming that our custom likelihood function
 </div>
 </div>
 </div>
-<div id="522462dd" class="cell" data-execution_count="9">
+<div id="9afaf500" class="cell" data-execution_count="9">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>X_0 <span class="op">=</span> X.copy()<span class="op">;</span> X_0[<span class="st">"iscustomer"</span>] <span class="op">=</span> <span class="dv">0</span></span>
@@ -884,7 +884,7 @@ Variable Definitions
 </section>
 <section id="data-preparation" class="level3">
 <h3 class="anchored" data-anchor-id="data-preparation">Data Preparation</h3>
-<div id="f29b5c91" class="cell" data-execution_count="10">
+<div id="9da362a9" class="cell" data-execution_count="10">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -1109,7 +1109,7 @@ Variable Definitions
 </section>
 <section id="exploratory-data-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
-<div id="09b80684" class="cell" data-execution_count="11">
+<div id="dde592ce" class="cell" data-execution_count="11">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> df_model[<span class="st">"number_of_reviews"</span>]</span>
@@ -1142,7 +1142,7 @@ Variable Definitions
 </section>
 <section id="poisson-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="poisson-regression-model">Poisson Regression Model</h3>
-<div id="d4f79619" class="cell" data-execution_count="12">
+<div id="9e9ef412" class="cell" data-execution_count="12">
 <details class="code-fold">
 <summary>Show code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
