@@ -1,6 +1,6 @@
 ---
 title: "Identifying Key Drivers of Customer Satisfaction: A Comparative Modeling Approach"
-author: "KehangQin"
+author: "Kehang Qin"
 date: today
 ---
 
